@@ -32,7 +32,6 @@ _coco_embedding_cache: dict = {}
 def _build_coco_cache():
     """Precompute and cache embeddings for all COCO labels."""
     global _coco_embedding_cache
-    embeddings = encode_text.__self__  # not needed — just call encode_text in batch
 
     # Use batch encode for speed (sentence-transformers supports list input)
     from encoder import model as _model
@@ -89,16 +88,12 @@ def compute_similarity(task_query: str, labels: list[str]) -> list[float]:
 # ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
-    task = "What should I use to cut fruit?"
-    labels = ["knife", "apple", "laptop"]
+    task = input("Enter task query: ")
+    labels_input = input("Enter labels (comma-separated): ")
+    labels = [l.strip() for l in labels_input.split(",")]
 
     scores = compute_similarity(task, labels)
 
     print(f"\nTask: '{task}'\n")
     for label, score in sorted(zip(labels, scores), key=lambda x: -x[1]):
         print(f"  {label:<12} → {score:.4f}")
-
-    # Assertion: knife should rank highest
-    top_label = labels[scores.index(max(scores))]
-    assert top_label == "knife", f"Expected 'knife' at top, got '{top_label}'"
-    print("\n✅ Sanity check passed — 'knife' ranked highest.")
