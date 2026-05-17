@@ -23,6 +23,14 @@ COCO_LABELS = [
     "laptop", "mouse", "remote", "keyboard", "cell phone", "microwave",
     "oven", "toaster", "sink", "refrigerator", "book", "clock", "vase",
     "scissors", "teddy bear", "hair drier", "toothbrush",
+    "bottle_opener",
+"bucket",
+"carpet_beater",
+"cutter",
+"fire_extinguisher",
+"shovel",
+"spatula",
+"watering_can",
 ]
 
 # Dict: label -> embedding vector

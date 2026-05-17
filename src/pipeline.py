@@ -35,12 +35,14 @@ TASK_PRIORS = {
     },
 
     "get potatoes out of fire": {
-        "spoon": 0.25,
-        "fork": 0.15,
-        "bowl": 0.10
+        "spatula": 0.30,
+        "spoon": 0.20,
+        "knife": 0.15,
+        "fork": 0.10
     },
 
-    "water plant": {
+    "water a plant": {
+        "watering can": 0.35,
         "bottle": 0.20,
         "cup": 0.15,
         "bowl": 0.10,
@@ -51,31 +53,36 @@ TASK_PRIORS = {
 
     "get lemon out of tea": {
         "spoon": 0.25,
+        "fork": 0.15,
+        "spatula": 0.10,
         "cup": 0.10
     },
 
-    "dig hole": {
-        "spoon": 0.15,
+    "dig a hole": {
+        "shovel": 0.35,
         "knife": 0.20,
+        "spoon": 0.15,
         "fork": 0.10,
         "baseball bat": 0.10
     },
 
-    "open bottle of beer": {
-        "bottle": 0.15,
+    "open a bottle of beer": {
+        "bottle opener": 0.40,
         "knife": 0.20,
         "fork": 0.10,
-        "spoon": 0.10
+        "spoon": 0.10,
+        "bottle": 0.10
     },
 
-    "open parcel": {
+    "open a parcel": {
+        "cutter": 0.40,
         "scissors": 0.25,
         "knife": 0.20
     },
 
     "serve wine": {
-        "wine glass": 0.25,
-        "bottle": 0.15,
+        "wine glass": 0.30,
+        "bottle": 0.20,
         "cup": 0.10
     },
 
@@ -87,21 +94,24 @@ TASK_PRIORS = {
 
     "smear butter": {
         "knife": 0.25,
+        "spatula": 0.20,
         "spoon": 0.15,
         "fork": 0.10
     },
 
     "extinguish a fire": {
+        "fire extinguisher": 0.45,
         "bottle": 0.25,
         "cup": 0.10
     },
 
-    "pound carpet": {
+    "pound a carpet": {
+        "carpet beater": 0.40,
         "baseball bat": 0.30,
         "tennis racket": 0.20,
         "sports ball": 0.10,
-        "chair": 0.10,
-        "bench": 0.10
+    
+
     }
 }
 
