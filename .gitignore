@@ -1,5 +1,14 @@
 venv/
 __pycache__/
 *.pyc
+
 outputs/
-results/
+test_images/
+filtered_images/
+val2014/
+
+dataset/
+
+*.pt
+
+results/filter_log.txt
